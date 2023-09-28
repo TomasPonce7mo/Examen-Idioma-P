@@ -11,7 +11,7 @@ const mime = {
 }
 
 const servidor = http.createServer((pedido, respuesta) => {
-  const url = new URL('https://examen-idioma-j5dyxnfjr-tomasponce7mos-projects.vercel.app/' + pedido.url)
+  const url = new URL('http://localhost:8088' + pedido.url)
   let camino = 'public' + url.pathname
   if (camino == 'public/')
     camino = 'public/index.html'
