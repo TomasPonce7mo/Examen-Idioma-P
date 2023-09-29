@@ -11,7 +11,7 @@ const mime = {
 }
 
 const servidor = http.createServer((pedido, respuesta) => {
-  const url = new URL('http://localhost:8080' + pedido.url)
+  const url = new URL('https://idioma-p.onrender.com/' + pedido.url)
   let camino = 'public' + url.pathname
   if (camino == 'public/')
     camino = 'public/index.html'
