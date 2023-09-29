@@ -1,8 +1,6 @@
 const http = require('http')
 const fs = require('fs')
 
-console.log("js")
-
 const mime = {
   'html': 'text/html',
   'css': 'text/css',
@@ -13,7 +11,7 @@ const mime = {
 }
 
 const servidor = http.createServer((pedido, respuesta) => {
-  const url = new URL('https://idioma-p.onrender.com/' + pedido.url)
+  const url = new URL('http://localhost:8080' + pedido.url)
   let camino = 'public' + url.pathname
   if (camino == 'public/')
     camino = 'public/index.html'
